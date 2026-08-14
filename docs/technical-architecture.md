@@ -1,5 +1,7 @@
 # Cortex foundational technical architecture
 
+> Historical architecture research. The current v1 product decision is Electron + TypeScript; this document remains the source-backed Tauri evaluation and design research.
+
 Status: recommendation for an MVP, not an implementation plan  
 Date: 2026-08-14
 
