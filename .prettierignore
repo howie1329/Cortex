@@ -1,0 +1,9 @@
+docs/
+AGENTS.md
+node_modules/
+out/
+release/
+pnpm-lock.yaml
+*.tsbuildinfo
+apps/desktop/src/renderer/styles.css
+apps/desktop/src/renderer/routeTree.gen.ts

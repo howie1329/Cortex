@@ -22,11 +22,41 @@ Cloud sync, mobile/web clients, recurring jobs, MCP, and autonomous maintenance 
 
 - Electron
 - React + TypeScript + Vite
+- TanStack Router + TanStack Query
+- pnpm workspaces + Turborepo
 - CodeMirror 6
 - SQLite with FTS5
 - Markdown files as the canonical store for authored knowledge
 
 See [`docs/technology.md`](docs/technology.md) for the current technical direction.
+
+## Development
+
+Requirements:
+
+- Node.js 24.19
+- pnpm 11.22
+
+```bash
+pnpm install
+pnpm dev
+```
+
+The desktop application lives in `apps/desktop`. Electron owns native capabilities in the
+main process, while the React renderer uses TanStack Router and Query behind a typed preload
+boundary.
+
+Run the complete local verification suite with:
+
+```bash
+pnpm format:check
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+```
+
+Create an unpacked macOS application or DMG with `pnpm package:dir` and `pnpm package:mac`.
 
 ## Documentation
 

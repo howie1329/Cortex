@@ -1,0 +1,16 @@
+appId: com.howie.cortex
+productName: Cortex
+directories:
+  buildResources: build
+  output: release
+files:
+  - out/**
+  - package.json
+mac:
+  target:
+    - dmg
+  category: public.app-category.productivity
+  artifactName: Cortex-${version}-${arch}.${ext}
+dmg:
+  artifactName: Cortex-${version}-${arch}.${ext}
+npmRebuild: false

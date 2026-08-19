@@ -9,6 +9,7 @@ The selected v1 direction is:
 ```text
 Electron
   ├── React + TypeScript + Vite renderer
+  ├── TanStack Router + TanStack Query application layer
   ├── TypeScript application/core services
   ├── Node.js main-process integration
   ├── CodeMirror 6 source editor
@@ -56,6 +57,12 @@ Adapters
 ```
 
 The renderer should not directly access arbitrary paths, spawn processes, or read credentials. The main process exposes narrow, typed operations backed by the core.
+
+The repository uses pnpm workspaces and Turborepo for dependency management and task
+orchestration. TanStack Router uses hash history so packaged desktop routes do not require an
+HTTP server or filesystem rewrite rules. TanStack Query owns asynchronous state crossing the
+typed preload boundary; temporary visual state remains local React state. TanStack Start, SSR,
+and server functions are intentionally not part of the desktop runtime.
 
 ## Suggested project structure
 
@@ -432,4 +439,3 @@ The architecture is doing its job if the team can improve the editor, context as
 The first technical milestone is not “the app has a complete architecture.” It is:
 
 > A user can write Markdown, ask a scoped general agent for help, review a safe proposed change, apply it, and find the result later.
-
