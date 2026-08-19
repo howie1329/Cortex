@@ -1,6 +1,6 @@
 # Issue tracker: Local Markdown
 
-Issues and specs for this repo live in `docs/plans/`.
+Issues and specs for this repo live as Markdown files in `docs/plans/`.
 
 ## Conventions
 

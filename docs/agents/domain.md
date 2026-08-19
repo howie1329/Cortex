@@ -4,7 +4,7 @@ Cortex is a single-context repository.
 
 ## Before exploring
 
-Read:
+Read these before exploring:
 
 - `CONTEXT.md` at the repository root, if it exists
 - Relevant decisions in `docs/adr/`, if they exist
